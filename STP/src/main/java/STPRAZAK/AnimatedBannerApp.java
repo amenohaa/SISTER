@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package razak200023;
+package STPRAZAK;
 
 /**
  *
@@ -29,7 +29,7 @@ public class AnimatedBannerApp extends JFrame {
         bannerText = JOptionPane.showInputDialog("Masukkan teks untuk banner:");
         bannerLabel = new JLabel(bannerText);
         bannerLabel.setFont(new Font("Arial", Font.PLAIN, 36));
-        bannerLabel.setForeground(textColors[0]); // Set initial text color
+        bannerLabel.setForeground(textColors[0]); 
         bannerLabel.setBounds(0, 0, 400, 100);
         add(bannerLabel);
 
@@ -52,13 +52,12 @@ public class AnimatedBannerApp extends JFrame {
 
         if (xPos + labelWidth > windowWidth) {
             xPos = -labelWidth;
-            // Change text color randomly
             int randomColorIndex = (int) (Math.random() * textColors.length);
             bannerLabel.setForeground(textColors[randomColorIndex]);
         }
 
         bannerLabel.setLocation(xPos, 0);
-        xPos += 5; // Adjust the speed of movement here
+        xPos += 5; 
     }
 
     public static void main(String[] args) {
